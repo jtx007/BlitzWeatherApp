@@ -12,7 +12,7 @@ body {
 
 .forecast-panel {
   border: 5px solid black;
-  width: 75rem;
+  width: 100rem;
   height: 50rem;
   background-color: grey;
   margin: 3rem auto;
