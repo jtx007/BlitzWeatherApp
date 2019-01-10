@@ -17,3 +17,12 @@ body {
   background-color: grey;
   margin: 3rem auto;
 }
+
+.weather-panels {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25% 25%;
+}
+
+.day-panel {
+  border: 5px solid black;
+}
