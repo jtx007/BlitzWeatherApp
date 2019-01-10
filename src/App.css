@@ -19,10 +19,19 @@ body {
 }
 
 .weather-panels {
+  margin: 4rem  auto;
+  align-content: center;
+  /* border: 5px solid red; */
+  width: 99rem;
   display: grid;
-  grid-template-columns: 25% 25% 25% 25% 25%;
+  justify-content: center;
+  grid-template-columns: 15% 15% 15% 15% 15%;
+  grid-column-gap: 3rem;
 }
 
 .day-panel {
-  border: 5px solid black;
+  border: 1px solid black;
+  height: 40rem;
+  background-color: whitesmoke;
+  box-shadow: 7px 3px black; 
 }
