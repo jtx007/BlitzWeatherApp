@@ -15,22 +15,28 @@ export default class forecastPanel extends Component {
     render () {
         
         return (
-            <div className="forecast-panel">
-                <div className="weather-panels">
-                    <div className="day-panel">
-                        <p>Day 1</p>
-                    </div>
-                    <div className="day-panel">
-                        <p>Day 2</p>
-                    </div>
-                    <div className="day-panel">
-                        <p>Day 3</p>
-                    </div>
-                    <div className="day-panel">
-                        <p>Day 4</p>
-                    </div>
-                    <div className="day-panel">
-                        <p>Day 5</p>
+            <div className="App-Container">
+                <form>
+                    <input className="search-input" placeholder="Type in your location here"/>
+                    <button className="search-btn" type="submit">Search</button> 
+                </form>
+                <div className="forecast-panel">
+                    <div className="weather-panels">
+                        <div className="day-panel">
+                            <p>Day 1</p>
+                        </div>
+                        <div className="day-panel">
+                            <p>Day 2</p>
+                        </div>
+                        <div className="day-panel">
+                            <p>Day 3</p>
+                        </div>
+                        <div className="day-panel">
+                            <p>Day 4</p>
+                        </div>
+                        <div className="day-panel">
+                            <p>Day 5</p>
+                        </div>
                     </div>
                 </div>
             </div>
