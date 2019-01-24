@@ -4,7 +4,7 @@ import Skycons from 'react-skycons'
 export default class DayPanel extends Component {
 
     convertIconFormat = (icon) => {
-        let newIcon = icon.toUpperCase()
+        let newIcon = icon.toUpperCase().split("-").join("_")
         return newIcon
     }
 
