@@ -23,15 +23,16 @@ body {
   align-content: center;
   /* border: 5px solid red; */
   width: 99rem;
-  display: grid;
+  display: grid !important;
   justify-content: center;
-  grid-template-columns: 15% 15% 15% 15% 15%;
+  grid-template-columns: 12% 12% 12% 12% 12% 12% 12% 12% !important;
   grid-column-gap: 3rem;
 }
 
 .day-panel {
   border: 1px solid black;
-  height: 40rem;
+  height: 10rem;
+  width: 10rem;
   background-color: whitesmoke;
   box-shadow: 1rem 1rem 1rem black; 
 }
