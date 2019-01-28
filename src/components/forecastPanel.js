@@ -11,7 +11,7 @@ export default class forecastPanel extends Component {
     
     renderWeatherPanels = (data) => {
         return data.map(day => {
-            return <DayPanel key={day.time} weather={day} />
+            return <div key={day.time} className="day-panel"><DayPanel key={day.time} weather={day}/></div>
         })
     }
 
@@ -26,6 +26,7 @@ export default class forecastPanel extends Component {
 
 
     render () {
+        console.log(this.state.weather)
         return (
             <div className="App-Container">
                 <form>

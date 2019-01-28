@@ -11,27 +11,23 @@ body {
 }
 
 .forecast-panel {
+  padding-left: 2rem;
   border: 5px solid black;
   width: 100rem;
   height: 50rem;
   background-color: grey;
   margin: 3rem auto;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(8, 3fr);
 }
 
-.weather-panels {
-  margin: 4rem  auto;
-  align-content: center;
-  /* border: 5px solid red; */
-  width: 99rem;
-  display: grid !important;
-  justify-content: center;
-  grid-template-columns: 12% 12% 12% 12% 12% 12% 12% 12% !important;
-  grid-column-gap: 3rem;
-}
+
 
 .day-panel {
-  border: 1px solid black;
-  height: 10rem;
+  margin-top: 2rem;
+  border-radius: 15px;
+  height: 35rem;
   width: 10rem;
   background-color: whitesmoke;
   box-shadow: 1rem 1rem 1rem black; 
@@ -44,7 +40,6 @@ body {
   width: 20rem;
   font-size: 24px;
   height: 3rem;
-  border: 3px solid black;
 }
 
 .search-btn {
@@ -52,6 +47,9 @@ body {
   width: 10rem;
   font-size: 24px;
   border-radius: 10px 10px 10px 10px;
-  border: 2px solid black;
   background-color: lightgray;
+}
+
+.high-low-temperatures {
+  font-size: 24px;
 }
