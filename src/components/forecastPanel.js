@@ -15,6 +15,10 @@ export default class forecastPanel extends Component {
         })
     }
 
+    weatherSearch = (lat, long) => {
+        return 
+    }
+
     componentDidMount() {
         fetch('http://localhost:3000/')
         .then(r => r.json())

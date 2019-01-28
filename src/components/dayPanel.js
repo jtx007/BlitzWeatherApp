@@ -9,8 +9,7 @@ export default class DayPanel extends Component {
     }
 
     convertEpochToDate = (val) => {
-        let myDate =  new Date(val * 1000)
-        myDate.toString()
+        let myDate = (new Date(val * 1000).toString())
         return myDate
     }
 
@@ -18,7 +17,7 @@ export default class DayPanel extends Component {
         console.log(this.props)
         return (
             <div>
-                <p>{(this.props.weather.time)}</p>
+                <p>{this.convertEpochToDate(this.props.weather.time)}</p>
                 <Skycons
                 color='black'
                 icon={this.convertIconFormat(this.props.weather.icon)}
@@ -31,8 +30,8 @@ export default class DayPanel extends Component {
                 <p>Windspeed: {this.props.weather.windSpeed} mph</p>
                 <p>Visibility: {this.props.weather.visibility}</p>
                 <p>Pressure: {this.props.weather.pressure}</p>
-                <p>Sunrise: {this.props.weather.sunriseTime}</p>
-                <p>Sunset: {this.props.weather.sunsetTime}</p>
+                <p>Sunrise:{this.convertEpochToDate(this.props.weather.sunriseTime)}</p>
+                <p>Sunset: {this.convertEpochToDate(this.props.weather.sunsetTime)}</p>
             </div>
         )
     }
