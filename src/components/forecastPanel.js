@@ -15,8 +15,20 @@ export default class forecastPanel extends Component {
         })
     }
 
-    weatherSearch = (lat, long) => {
-        return 
+    weatherSearch = (e) => {
+        e.preventDefault()
+        fetch("Express Endpoint", {
+            method: "POST",
+            body: JSON.stringify("latitude and longitude coordinates"),
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            }
+        })
+        .then(r => r.json())
+        .then(weather => this.setState({
+            weather: weather.daily.data 
+        }))
     }
 
     componentDidMount() {
@@ -33,7 +45,7 @@ export default class forecastPanel extends Component {
         console.log(this.state.weather)
         return (
             <div className="App-Container">
-                <form>
+                <form onSubmit={this.weatherSearch}>
                     <input className="search-input" placeholder="Type in your location here"/>
                     <button className="search-btn" type="submit">Search</button> 
                 </form>

@@ -1,7 +1,21 @@
 
 body {
-  background-color: rgba(53, 13, 53, 0.269)
+  background-color: rgba(53, 13, 53, 0.269);
+  font-family: "HelveticaNeue-Light",
+  "Helvetica Neue Light",
+  "Helvetica Neue",
+  Helvetica,
+  Arial,
+  "Lucida Grande",
+  sans-serif;
+  font-weight: 300;
+
 }
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
 
 .header-navbar {
   border: 5px solid black;
@@ -27,12 +41,12 @@ body {
 .day-panel {
   padding-left: 8px;
   overflow: scroll;
+
   margin-top: 2rem;
   border-radius: 15px;
   height: 35rem;
   width: 11rem;
   background-color: whitesmoke;
-  box-shadow: 1rem 1rem 1rem black; 
 }
 
 .search-input {
@@ -53,5 +67,6 @@ body {
 }
 
 .high-low-temperatures {
-  font-size: 24px;
+  font-size: 36px;
+  margin-left: 1rem;
 }
