@@ -6,8 +6,11 @@ export default class forecastPanel extends Component {
 
 
     state = {
-        weather: []
+        weather: [],
+        location: ""
     }
+
+
     
     renderWeatherPanels = (data) => {
         return data.map(day => {
@@ -15,29 +18,22 @@ export default class forecastPanel extends Component {
         })
     }
 
-    weatherSearch = (e) => {
-        e.preventDefault()
-        fetch("Express Endpoint", {
-            method: "POST",
-            body: JSON.stringify("latitude and longitude coordinates"),
-            headers: {
-                "Content-Type": "application/json",
-                "Accept": "application/json"
-            }
+    handleSearchBox = (e) => {
+        this.setState({
+            location: e.target.value
         })
-        .then(r => r.json())
-        .then(weather => this.setState({
-            weather: weather.daily.data 
-        }))
     }
 
-    componentDidMount() {
-        fetch('http://localhost:3000/')
+    weatherSearch = (e) => {
+        e.preventDefault()
+        fetch(`http://localhost:9000/?location=${this.state.location}`)
         .then(r => r.json())
         .then(weather => this.setState({
             weather: weather.daily.data
         }))
-    }  
+    }
+
+    
 
 
 
@@ -46,7 +42,7 @@ export default class forecastPanel extends Component {
         return (
             <div className="App-Container">
                 <form onSubmit={this.weatherSearch}>
-                    <input className="search-input" placeholder="Type in your location here"/>
+                    <input onChange={this.handleSearchBox} className="search-input" placeholder="Type in your location here"/>
                     <button className="search-btn" type="submit">Search</button> 
                 </form>
                 <div className="forecast-panel">
