@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import DayPanel from './DayPanel.js'
+import DayPanel from './dayPanel.js'
 
 
 export default class forecastPanel extends Component {
