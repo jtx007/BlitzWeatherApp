@@ -18,10 +18,17 @@ html {
 
 
 .header-navbar {
-  border: 5px solid black;
-  text-align: center;
   color: white;
-  background-color: rgba(36, 32, 32, 0.967);
+  background-color: rgba(36, 32, 32, 0);
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 10% 10% 10%;
+  grid-gap: 5px;
+}
+
+.navbar-icon {
+  height: 50px;
+  margin-left: 6rem;
 }
 
 .forecast-panel {
@@ -66,17 +73,18 @@ html {
 }
 
 .search-input {
+  border-radius: 25px;
   margin-left: 40rem;
   margin-top: 5rem;
   margin-right: 1rem;
-  width: 20rem;
+  width: 30rem;
   font-size: 24px;
-  height: 3rem;
+  height: 1em;
 }
 
 .search-btn {
-  height: 3rem;
-  width: 10rem;
+  height: 2rem;
+  width: 2.5rem;
   font-size: 24px;
   border-radius: 10px 10px 10px 10px;
   background-color: lightgray;
@@ -98,7 +106,7 @@ h1 {
   margin-bottom: 1.375em;
   color: #fff;
   font-weight: 100;
-  font-size: 2em;
+  font-size: 3em;
   text-transform: uppercase;
 }
 

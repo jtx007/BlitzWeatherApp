@@ -93,8 +93,9 @@ export default class forecastPanel extends Component {
         return (
             <div className="App-Container">
                 <form onSubmit={this.weatherSearch}>
-                    <input onChange={this.handleSearchBox} className="search-input" placeholder="Type in your location here"/>
-                    <button className="search-btn" type="submit">Search</button> 
+                    <input onChange={this.handleSearchBox} className="search-input"/>
+                    <button className="search-btn" type="submit">
+                        <i class="material-icons">search</i></button> 
                 </form>
                 <div className="forecast-panel">
 

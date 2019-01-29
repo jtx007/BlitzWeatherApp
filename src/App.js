@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import ForecastPanel from './components/forecastPanel'
+import githubIcon from './githubicon.png'
+import mediumIcon from './mediumicon.png'
+import linkedinIcon from './linkedinicon.png'
 import './App.css';
 
 class App extends Component {
@@ -7,7 +10,9 @@ class App extends Component {
     return (
       <div>
         <div className="header-navbar">
-          <h1>Weather App</h1>
+          <a href="https://github.com/jtx007/weatherApp"><img className="navbar-icon" alt="github" src={githubIcon} /></a>
+          <a href="https://medium.com/@jamesjacobthomas7"><img className="navbar-icon" alt="medium" src={mediumIcon} /></a>
+          <a href="https://www.linkedin.com/in/james-thomas007/"><img className="navbar-icon" alt="linkedin" src={linkedinIcon}/></a>
         </div>
         <ForecastPanel/>
 
