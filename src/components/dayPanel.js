@@ -19,7 +19,6 @@ export default class DayPanel extends Component {
     }
 
     render() {
-        console.log(this.props)
         return (
             <div>
                 <p>{this.convertEpochToDate(this.props.weather.time)}</p>

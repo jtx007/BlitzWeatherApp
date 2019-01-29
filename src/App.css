@@ -10,25 +10,34 @@ body {
   sans-serif;
   font-weight: 300;
   color: black;
+  margin: 0px;
 }
 
 html {
   -webkit-font-smoothing: antialiased;
 }
 
+.logo {
+  position: absolute;
+  z-index: 1;
+  font-size: 45px;
+  margin: 0 5rem auto;
+}
 
 .header-navbar {
   color: white;
-  background-color: rgba(36, 32, 32, 0);
+  height: 4rem;
   display: grid;
   justify-content: center;
-  grid-template-columns: 10% 10% 10%;
-  grid-gap: 5px;
+  grid-template-columns: 10% 10% 10% 10%;
+  grid-gap: 50px;
+  text-align: center;
 }
 
 .navbar-icon {
-  height: 50px;
-  margin-left: 6rem;
+  height: 30px;
+  margin-left: 12rem;
+  padding-top: 1rem;
 }
 
 .forecast-panel {
@@ -41,6 +50,7 @@ html {
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(8, 4fr);
+  border-radius: 50px;
 }
 
 .splash-page-panel {
@@ -74,12 +84,13 @@ html {
 
 .search-input {
   border-radius: 25px;
-  margin-left: 40rem;
+  margin-left: 38rem;
   margin-top: 5rem;
   margin-right: 1rem;
   width: 30rem;
   font-size: 24px;
-  height: 1em;
+  height: 33px;
+  outline: none;
 }
 
 .search-btn {
@@ -425,4 +436,67 @@ p {
     background: #fff;
     opacity: 0.2;
   }
+}
+
+/* Search Input placeholder font */
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: grey;
+  font-family: "HelveticaNeue-Light",
+  "Helvetica Neue Light",
+  "Helvetica Neue",
+  Helvetica,
+  Arial,
+  "Lucida Grande",
+  sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin-left: 1rem;
+  text-align: center;
+
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: grey;
+  font-family: "HelveticaNeue-Light",
+  "Helvetica Neue Light",
+  "Helvetica Neue",
+  Helvetica,
+  Arial,
+  "Lucida Grande",
+  sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+
+}
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: grey;
+  font-family: "HelveticaNeue-Light",
+  "Helvetica Neue Light",
+  "Helvetica Neue",
+  Helvetica,
+  Arial,
+  "Lucida Grande",
+  sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: grey;
+  font-family: "HelveticaNeue-Light",
+  "Helvetica Neue Light",
+  "Helvetica Neue",
+  Helvetica,
+  Arial,
+  "Lucida Grande",
+  sans-serif;
+  font-weight: 300;
+  font-size: 20px;
 }

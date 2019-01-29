@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react'
-import Skycons from 'react-skycons'
 import DayPanel from './DayPanel.js'
 
 
@@ -63,8 +62,9 @@ export default class forecastPanel extends Component {
 
             )
         } else {
+        let seconds = 1
         return data.map(day => {
-            return <div key={day.time} className="day-panel"><DayPanel key={day.time} weather={day}/></div>
+            return <div key={day.time} className={`day-panel animated fadeInUp delay-.5s`}><DayPanel key={day.time} weather={day}/></div>
         }
         )}
     }
@@ -89,16 +89,14 @@ export default class forecastPanel extends Component {
 
 
     render () {
-        console.log(this.state.weather)
         return (
             <div className="App-Container">
                 <form onSubmit={this.weatherSearch}>
-                    <input onChange={this.handleSearchBox} className="search-input"/>
+                    <input onChange={this.handleSearchBox} placeholder="Enter location here" className="search-input"/>
                     <button className="search-btn" type="submit">
-                        <i class="material-icons">search</i></button> 
+                        <i className="material-icons">search</i></button> 
                 </form>
                 <div className="forecast-panel">
-
                     {this.renderWeatherPanels(this.state.weather)}
                 </div>
             </div>
