@@ -12,9 +12,9 @@ class App extends Component {
           <p className='logo'>BLITZ</p>
         <ForecastPanel/>
         <div className="header-navbar">
-          <a href="https://github.com/jtx007/weatherApp"><img className="navbar-icon" alt="github" src={githubIcon} /></a>
-          <a href="https://medium.com/@jamesjacobthomas7"><img className="navbar-icon" alt="medium" src={mediumIcon} /></a>
-          <a href="https://www.linkedin.com/in/james-thomas007/"><img className="navbar-icon" alt="linkedin" src={linkedinIcon}/></a>
+          <a href="https://github.com/jtx007/weatherApp"><img className="navbar-icon" alt="github" src={githubIcon} />Github</a>
+          <a href="https://medium.com/@jamesjacobthomas7"><img className="navbar-icon" alt="medium" src={mediumIcon} />Medium</a>
+          <a href="https://www.linkedin.com/in/james-thomas007/"><img className="navbar-icon" alt="linkedin" src={linkedinIcon}/>Linkedin</a>
         </div>
 
       </div>

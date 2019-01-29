@@ -29,15 +29,16 @@ html {
   height: 4rem;
   display: grid;
   justify-content: center;
-  grid-template-columns: 10% 10% 10% 10%;
+  grid-template-columns: 10% 10% 10%;
+  grid-template-rows: 10% 10%;
   grid-gap: 50px;
   text-align: center;
 }
 
 .navbar-icon {
   height: 30px;
-  margin-left: 12rem;
   padding-top: 1rem;
+  margin-right: 1rem;
 }
 
 .forecast-panel {
