@@ -62,9 +62,8 @@ export default class forecastPanel extends Component {
 
             )
         } else {
-        let seconds = 1
         return data.map(day => {
-            return <div key={day.time} className={`day-panel animated fadeInUp delay-.5s`}><DayPanel key={day.time} weather={day}/></div>
+            return <div key={day.time} className={`day-panel animated fadeInUp`}><DayPanel key={day.time} weather={day}/></div>
         }
         )}
     }
@@ -77,7 +76,7 @@ export default class forecastPanel extends Component {
 
     weatherSearch = (e) => {
         e.preventDefault()
-        fetch(`http://localhost:9000/?location=${this.state.location}`)
+        fetch(`https://blitzproxyserver.herokuapp.com/?location=${this.state.location}`)
         .then(r => r.json())
         .then(weather => this.setState({
             weather: weather.daily.data
