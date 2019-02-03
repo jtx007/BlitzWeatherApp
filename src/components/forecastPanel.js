@@ -76,7 +76,7 @@ export default class forecastPanel extends Component {
 
     weatherSearch = (e) => {
         e.preventDefault()
-        fetch(`http://localhost:9000/?location=${this.state.location}`)
+        fetch(`https://blitzproxyserver.herokuapp.com//?location=${this.state.location}`)
         .then(r => r.json())
         .then(weather => this.setState({
             weather: weather.daily.data
