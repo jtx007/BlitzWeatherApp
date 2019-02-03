@@ -76,7 +76,7 @@ export default class forecastPanel extends Component {
 
     weatherSearch = (e) => {
         e.preventDefault()
-        fetch(`https://blitzproxyserver.herokuapp.com/?location=${this.state.location}`)
+        fetch(`http://localhost:9000/?location=${this.state.location}`)
         .then(r => r.json())
         .then(weather => this.setState({
             weather: weather.daily.data
@@ -88,6 +88,7 @@ export default class forecastPanel extends Component {
 
 
     render () {
+        console.log(this.state.weather)
         return (
             <div className="App-Container">
                 <form onSubmit={this.weatherSearch}>
