@@ -1,42 +1,46 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Skycons from 'react-skycons'
 
-export default class DayPanel extends Component {
 
-    convertIconFormat = (icon) => {
+
+const DayPanel = ({ weather }) => {
+    const convertIconFormat = (icon) => {
         let newIcon = icon.toUpperCase().split("-").join("_")
         return newIcon
     }
-
-    convertEpochToDate = (val) => {
+    
+    const convertEpochToDate = (val) => {
         let myDate = (new Date(val * 1000).toString().slice(0, 15))
         return myDate
     }
-
-    convertEpochToTime = (val) => {
+    const convertEpochToTime = (val) => {
         let myTime = (new Date(val * 1000).toString().slice(15, 60))
         return myTime
     }
 
-    render() {
-        return (
+
+    return (
+        <>
             <div>
-                <p>{this.convertEpochToDate(this.props.weather.time)}</p>
+                <p>{convertEpochToDate(weather.time)}</p>
                 <Skycons
                 color='black'
-                icon={this.convertIconFormat(this.props.weather.icon)}
+                icon={convertIconFormat(weather.icon)}
                 autoplay={true}
                 />
-                <strong><p className="high-low-temperatures">{Math.round(this.props.weather.temperatureMax)}˚  {Math.round(this.props.weather.temperatureMin)}˚</p></strong>
-                <p>{this.props.weather.summary}</p>
-                <p>UV Index: {this.props.weather.uvIndex}</p>
-                <p>Humidity: {Math.floor(this.props.weather.humidity*100)}%</p>
-                <p>Windspeed: {this.props.weather.windSpeed} mph</p>
-                <p>Visibility: {this.props.weather.visibility}</p>
-                <p>Pressure: {this.props.weather.pressure}</p>
-                <p>Sunrise: {this.convertEpochToTime(this.props.weather.sunriseTime)} AM</p>
-                <p>Sunset: {this.convertEpochToTime(this.props.weather.sunsetTime)} PM</p>
+                <strong><p className="high-low-temperatures">{Math.round(weather.temperatureMax)}˚  {Math.round(weather.temperatureMin)}˚</p></strong>
+                <p>{weather.summary}</p>
+                <p>UV Index: {weather.uvIndex}</p>
+                <p>Humidity: {Math.floor(weather.humidity*100)}%</p>
+                <p>Windspeed: {weather.windSpeed} mph</p>
+                <p>Visibility: {weather.visibility}</p>
+                <p>Pressure: {weather.pressure}</p>
+                <p>Sunrise: {convertEpochToTime(weather.sunriseTime)} AM</p>
+                <p>Sunset: {convertEpochToTime(weather.sunsetTime)} PM</p>
             </div>
-        )
-    }
+
+        </>
+    )
 }
+
+export default DayPanel;

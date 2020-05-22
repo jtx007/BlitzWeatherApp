@@ -1,6 +1,6 @@
 
 body {
-  background-color: rgba(0, 0, 0, 0.269);
+  background: linear-gradient(#e66465, #9198e5);
   font-family: "HelveticaNeue-Light",
   "Helvetica Neue Light",
   "Helvetica Neue",
@@ -11,6 +11,7 @@ body {
   font-weight: 300;
   color: black;
   margin: 0px;
+  height: 100vh;
 }
 
 html {
@@ -19,21 +20,27 @@ html {
 
 .logo {
   position: absolute;
+  color: white;
+   text-shadow: 
+      4px 4px 0px #000000, 
+      7px 7px 0px rgba(0, 0, 0, 0.2);
+  
   z-index: 1;
   font-size: 45px;
   margin: 0 5rem auto;
 }
 
 .header-navbar {
-  color: white;
-  height: 4rem;
-  display: grid;
-  justify-content: center;
-  grid-template-columns: 10% 10% 10%;
-  grid-template-rows: 10% 10%;
-  grid-gap: 50px;
-  grid-row-gap: 33px;
-  text-align: center;
+  height: 5vh;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  background-color: rgba(231, 215, 215, 0.733);
+  align-items: center;
+  width: 20vw;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 .navbar-icon {
@@ -43,49 +50,39 @@ html {
 }
 
 .forecast-panel {
-  padding-left: 2rem;
-  border: 5px solid black;
-  width: 100rem;
-  height: 50rem;
-  background-color: rgb(3, 1, 1);
-  margin: 3rem auto;
-  display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(8, 4fr);
-  border-radius: 50px;
+  width: 95vw;
+  height: 70vh;
+  background-color: black;
+
+  border-radius: 10px;
+  margin: 20px auto;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 
-@media (max-width: 420px) {
-  .forecast-panel {
-    padding-left: 2rem;
-    border: 5px solid black;
-    width: 50rem;
-    height: 50rem;
-    background-color: rgb(3, 1, 1);
-    margin: 3rem auto;
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(8, 4fr);
-    border-radius: 50px;
-  }
-}
+
 
 .splash-page-panel {
   text-align: center;
-  display: inline-block;
   margin-left: 25rem;
-  margin-top: 5rem;
+  margin-top: 50px;
+  width: min-content;
+}
+
+.day-panels {
+  width: 100%;
+  height: min-content;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
 }
 
 .splash-page-icons {
-  width: 45rem;
-  text-align: center;
-  padding: 2em;
-  margin: 0 auto;
+  width: 45vw;
+  height: 10vh;
   color: #161616;
   font-family: 'Roboto',
   sans-serif;
-  text-align: center;
+  border: 1px solid transparent;
 }
 
 .day-panel {
@@ -93,10 +90,10 @@ html {
   overflow: scroll;
 
   margin-top: 2rem;
-  border-radius: 15px;
+  border-radius: 10px;
   height: 35rem;
-  width: 11rem;
-  background-color: whitesmoke;
+  width: 11vw;
+  background-color: rgba(245, 245, 245, 0.938);
 }
 
 .search-input {
@@ -104,6 +101,7 @@ html {
   margin-left: 38rem;
   margin-top: 5rem;
   margin-right: 1rem;
+  padding-left: 20px;
   width: 30rem;
   font-size: 24px;
   height: 33px;
@@ -114,8 +112,9 @@ html {
   height: 2rem;
   width: 2.5rem;
   font-size: 24px;
-  border-radius: 10px 10px 10px 10px;
-  background-color: lightgray;
+  border-radius: 10px;
+  background-color: rgb(250, 245, 245);
+  cursor: pointer;
 }
 
 .high-low-temperatures {
