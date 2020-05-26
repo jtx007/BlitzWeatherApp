@@ -22,3 +22,8 @@ npm start
 ## Tech Stack
 - React 16.11.0
 - HTML/CSS
+
+![pic1](src/assets/projectscreenshot1.png)
+
+
+![pic2](src/assets/projectscreenshot2.png)
